@@ -1,34 +1,6 @@
-% x=0:0.1:12;%x=0,0.1,0.2,...,11.9,12
-% y=(12-2*x)/4;
-% z=2*x;
-% plot(x,y,'red',x,z,'green');%to plot graph plot(x,y,color,x,z,color...)
-% xlabel('xvalues');
-% ylabel('yvalues');
-% title('graph');
-% legend('2x+4y=12','2x');% specify eqns represented
 clc;
 close all;
 %Graphical method to solve LPP
-%Q1
-% C=[3 2];
-% A=[2 4;3 5;1 0;0 1];
-% B=[8;15;0;0];
-% C=input('enter objective matrix');
-% A=input('enter coeff matrix');
-% B=input('enter constraints matrix');
-% x1=0:0.1:max(B);
-% x21=max(0,(B(1)-A(1,1)*x1)/A(1,2));%max to elimin
-% x22=max(0,(B(2)-A(2,1)*x1)/A(2,2));
-% % x21=max(0,(8-2*x1)/4);
-% % x22=max(0,(15-3*x1)/5);
-% plot(x1,x21,'red',x1,x22,'blue');
-% xlabel('xvalues');
-% ylabel('yvalues');
-% title('graph');
-% %legend('2x1+4x2','3x1+5x2');
-% legend('first line','second line');
-
-%intersection point
 %C=[2 3]
 %A=[1 2;1 1;0 1;1 0;0 1]
 %B=[200;1500;600;0;0]
@@ -56,8 +28,6 @@ xlabel('xvalues');
 ylabel('yvalues');
 title('graph');
 legend('1x1+2x2','x1+x2');
-%legend('first line','second line');
-%disp(sol)
 X1=sol(1,:);
 X2=sol(2,:);
 Y1=find(X1+2*X2>200);
